@@ -1,1 +1,6 @@
 node_modules/
+/Servidor/nbproject/private/
+/Servidor/build/
+/Servidor/dist/
+/Middleware/nbproject/private/
+/Cliente/build/
