@@ -1,9 +1,7 @@
 package conexion;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import javax.swing.JOptionPane;
@@ -22,7 +20,7 @@ public class conexion {
         jsonData.put("altura", altura);
 
         String servidor = "localhost";
-        int puerto = 1221;
+        int puerto = 5000;
 
         try (Socket socket = new Socket(servidor, puerto); OutputStream out = socket.getOutputStream(); InputStream in = socket.getInputStream()) {
             byte[] jsonBytes = jsonData.toString().getBytes();
@@ -46,6 +44,5 @@ public class conexion {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Error al conectar con el servidor");
         }
-
     }
 }
